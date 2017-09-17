@@ -1,0 +1,2777 @@
+
+内嵌：
+<script></script>
+
+位置：head  body 里都可以 
+
+执行顺序：由上到下 
+
+属性：type=text/javascript  是可选的 
+ language=javascript  是可选的
+
+alert("")
+
+外部文件：
+<script src="路径/文件名.js" ></script>
+
+ src是必选项
+
+defer="defer"  延时  只对外部文件生效，对内嵌不生效。
+ 
+
+
+基本语法：
+
+1、区分大小写 
+2、注释：
+   html 
+   css  /*  */
+   js  单行注释//
+       多行注释 /*   */
+
+ 
+3、结束以 ；分号 
+
+
+输出有三种方式：
+
+console.log()  控制台显示信息
+alert() 弹出框
+documente.write() 
+
+
+4、
+
+所谓标识符，指变量、函数、属性的名字，
+
+命名规范：
+字母  数字  下划线_  $ 
+第一个字符必须是 字母  _  $
+ 
+关键字和保留字不能用来做标识符 。
+
+变量：  
+字母  数字 下划线命名 。
+第一个字符只能是字母和_.
+
+定义变量的关键字 var 
+
+定义变量的过程:
+var  变量名=赋值;
+多个变量之间用逗号隔开。
+
+
+变量后赋值覆盖先赋值
+
+ 
+var定义的变量叫显式声明 
+没有用var的变量叫隐式声明
+
+var  num1
+
+num1=2334
+
+输入框：prompt(text,value) 
+        prompt(信息，默认值)
+        prompt("请输入信息","这里是默认值")
+
+可选项
+--------
+
+
++  的功能：两个：１个是加法，１个是字符串连接，拼接。
+
+输出的三种方式：
+
+ console.log()         控制台输出
+ alert()                    弹出框
+ document.write()   文档内
+
+
+
+变量的数据类型：
+
+５个基本型，１个复杂型对象类型 object
+
+
+undefined  未定义类型
+null  空类型
+boolean 布尔类型
+number   数值型
+string   字符串类型
+
+object    对象类型
+   
+判断数据类型的函数： typeof 变量名  或者  typeof(变量名)
+
+1、未定义类型 undefined
+
+    值只有一个 undefined
+  1) 这个变量定义了，没有赋值，那么值为 undefined .类型也是 undefined
+  var  a
+  console.log(a)  a=undefined
+  2)变量从未定义过 ，他的类型为undefined ，值报错。
+  typeof e  
+   
+2、空类型   null
+
+   Null类型是第二个只有一个值的类型，这个特殊值是null。null值表示一个空对象指针。    
+特殊的对象类型：object
+
+3、布尔类型   boolean      
+
+只有两个值 true 真 false 假  。
+
+
+
+Boolean(变量名)
+
+数字：  非0数字为true      0为false
+字符串： 非空字符串为true  "" 空字符串为false
+未定义和null类型都为false
+
+
+4、数值类型   number         数字
+
+整型  45
+浮点型  4.522
+
+范围：
+
+Number.MIN_VALUE: 5e-324
+Number.MAX_VALUE:1.7976931348623157e+308
+-Infinity(负无穷)、+Infinity(正无穷)
+
+3/0   +Infinity(正无穷)
+-3/0  -Infinity(负无穷)
+
+
+NaN   not a Number 不是一个数字   特殊的数值类型 
+
+
+转化为数字：
+Number(变量名)
+
+字符串 ：  "12333"      12333    
+           "adfdf3434"  NaN
+           ""            0
+          "adsfdsf"     NaN
+
+布尔值 ：  true   1   
+           false  0
+ 
+未定义：  NaN  
+null ：     0
+ 
+Number()
+
+"4578abvcd"
+"45.7962dfsfjkl"
+字符串转化为数字的函数：
+parseInt(  )  从第一位起取到整数部分
+parseFloat(  ) 从第一位起取到小数部分
+
+(变量)   不是一个数字为真，是数字为假。
+stateProvider
+urlRouterProvider
+
+5、 字符串类型  string       双引号"" 或者单引号  ''
+
+
+typeof判断变量的数据类型：
+typeof(变量名)  typeof 变量名 
+
+String 数据类型包含一些特殊的字符字面量，也叫转义序列，用于表示非打印字符，
+\n 换行
+\t  制表
+\b 空格
+\r  回车
+\f  进纸
+
+转化为字符串2种方法：
+可以转化任意类型 ：
+ String(123)      "123"
+ String(3>4)      "false"
+ String(34)      "true"
+ String(num1)     "undefined"
+ String(null)     "null"
+
+不能转化空类型和未定义 类型 ：
+变量名.toString()
+
+
+
+
+object 
+其实就是一组数据和功能的集合。
+对象的实例化。
+人：手  脚  头 头发  身高   年龄  体重   性别 
+特征：     
+性别：男 
+年龄 ：20
+身高 ：１７０
+肤色：　偏黄
+头发：　短发　
+功能：　
+
+吃饭　
+睡觉
+跑步
+唱歌跳舞　
+上网　
+
+
+女朋友：  
+特征：
+性别： 女 
+年龄： 18-25
+身高：160-165
+体重：100斤
+头发：长发
+长相：甜美
+功能：
+学习 
+做饭
+洗衣服
+上班
+跳舞
+唱歌
+化妆
+打台球
+打篮球
+上网玩游戏
+
+
+
+猫咪:
+
+
+
+大象：
+
+
+
+桌子：
+
+
+
+
+isNaN()   判断是不是数值的函数。返回值为布尔值true  ,false 
+
+如果是数值就为false  ，如果不是数值就为true.
+先往数值转化 ，然后在判断是不是数字。
+
+
+4+3
+一元
+二元
+三元
+
+
+操作符 ：
+
+将同类型的数据（如常量、变量、函数等），用运算符号按一定的规则连接起来的、有意义的式子称为表达式。
+
+一元运算符：
+++  --  
+前置 后置 
+区别？
+
+前置  先增加值在运算
+后置  先运算在增加值
+
+算数运算符：
+
+加性运算符：+  -
+乘性运算符： *  / %
+
+a=3+3  6
+a=3+"3"  33
+a="abc"+true   "abctrue"
+
+
+
+b=3-2  1
+b=3-"2" 1
+b="3"-"2" 1
+b=4-true 3
+b=4-false 4
+b=4-"abc"  NaN
+b=3>5-2   false
+
+c=3*3  9
+c=3*"3" 9
+c=3*true 3
+c=3*false 0
+c="abc"*3  NaN
+
+e=5%2  求余数
+
+e=2%5   2
+
+2-(4+5)*3/2
+
+
+
+优先级：乘性操作符优先于加性操作符，结合性：从左往右。
+
+
+关系运算符（比较运算符）：
+
+返回值为布尔值 true false
+
+<  >  <= >= 
+
+
+1)如果两个操作数都是数值，则执行数值比较。
+2)如果两个操作数都是字符串，则比较两个字符串对应的字符编码值。
+按位比较。
+3)如果一个操作数是数值，则将另一个操作数转换为一个数值，然后执行数值比较。
+注意：如果有一个转化为数字后为NaN，则返回值为false
+
+如果 成绩大于60  则输出 恭喜你及格了，
+否则  则输出   不及格，继续努努力。
+
+
+if(条件表达式){
+条件成立执行的语句;
+}
+else{
+
+条件不成立执行的语句；
+}
+
+  if(a<=18){
+          alert("未成年  ，努力长大哦")
+      }
+   else if(a<=50){
+          alert("恭喜你，成年了，努力奋斗")
+      }
+   else{
+          alert("老年人 ，享受生活")
+      }
+
+作业：  14:21 2015/6/1fdsfs  isNaN(num)   true 
+0   不及格  60   及格 70   良好  80  优秀 100  
+
+
+相等运算符：
+
+返回值布尔值 true  false
+==  !=  ===  !==
+
+相等和不等运算符：先转化类型在比较。
+3==3  3=="3"   true   3=="abc" false 
+
+3!=3 false  3!="abc" true
+
+全等和不全等运算符：不转化，直接比较。
+
+3===3  3==="3" 3!=="3"
+
+
+判断用户名和密码?  用户名=“你的名字”  密码=123456
+
+如果是输入的是星期一  星期二   星期五   工作日
+               星期六   星期日          休息日 
+
+
+
+布尔操作符（逻辑运算符）:
+
+逻辑与  逻辑或  逻辑非 
+
+&&       ||    !
+
+返回值大部分情况下是布尔值
+
+1\>17
+2\学费交齐
+3\考试通过 >60
+
+
+女朋友：
+1）性别：女
+2）年龄：18-25
+3）身高：165以上
+4）相貌：长相甜美
+5）性格：活泼开朗
+
+
+逻辑与：
+多个条件同时满足，才为真。
+true  true       true 
+true  false      false
+false true       false
+false false      false
+
+
+如果有一个操作数不是布尔值的时候：
+1）如果第一个操作数为true，则返回第二个操作数。
+2)如果第一个操作数为false，则不管后面是什么，都返回 
+false.
+
+逻辑与操作属于短路操作， 即如果第一个操作数能够决定结果， 那么就不会再对第二个操作数求值。
+对于逻辑与操作而言，如果第一个操作数是 false ，则无论第二个操作数是什么值，结果都不再可能是
+true 了。
+
+
+//console.log(3<4 && 4!=3 && "abde" && 123)
+
+逻辑或：
+
+只要有一个条件满足，就为真。
+true  true  true 
+true  false  true
+false  true   true
+false  false  false
+
+
+
+
+
+如果第一个操作数为true,则返回true.
+如果第一个操作数为false,则返回第二个操作数。
+
+ //  console.log(4<3 || 3!=5 || 5  ||  "123")
+
+逻辑非 ：
+
+取反 ！
+返回结果是布尔值 
+
+1号   10号   上旬 
+11  20  中旬 
+21  30   下旬 
+
+赋值运算符 ：
+
+简单的赋值操作符由等于号 （ = ） 表示， 其作用就是把右侧的值赋给左侧的变量.
+
+var  a=10
+复合赋值操作符：
+   乘/赋值（ *= ） ；
+   除/赋值（ /= ） ；
+   模/赋值（ %= ） ；
+   加/赋值（ += ） ；
+   减/赋值（ -= ） ；
+   左移/赋值（ <<= ） ；
+   有符号右移/赋值（ >>= ） ；
+   无符号右移/赋值（ >>>= ） 。
+
+逗号操作符：
+
+分隔多个变量 
+var  a=3,b=4,c=4;
+逗号操作符还可以用于赋值。在用于赋值时，逗号操作符总会返回表达式中的最后一项.
+
+条件操作符应该算是 ECMAScript 中最灵活的一种操作符。是三元操作符 。
+
+
+
+variable = boolean_expression ? true_value : false_value;
+
+               条件表达式  ?    为真的结果 :为假的结果
+
+
+var max=a>b?a:b
+
+
+
+一元操作符：
+一元加和减操作符
++
+一元加操作符以一个加号（+）表示，放在数值前面，对数值不会产生任何影响。  
+在对非数值应用一元加操作符时， 该操作符会像 Number() 转型函数一样对这个值执行转换。
++45 
+
+一元减操作符：
+-
+在将一元减操作符应用于数值时，该值会变成负数（如上面的例子所示） 。
+而当应用于非数值时，一元减操作符遵循与一元加操作符相同的规则，最后再将得到的数值转换为负数。
+
+
+1001
+
+
+优先级：    
+赋值操作符<逻辑运算符<关系运算符（相等运算符）<算数运算符 <一元运算符 ! ++  -- 
+
+a=3<4  &&  3=="4" &&  4+3-2>6
+a=true  &&  false  && true
+————————————————
+语句：
+流程控制语句：
+
+条件语句 和 循环语句 
+
+if(条件表达式 ){ 
+
+}
+
+if(条件表达式 ){ 
+
+}
+else{
+
+}
+
+
+if(条件表达式 1){ 
+
+}
+else if(条件表达式2）{
+
+}
+
+else if(条件表达式3){
+
+}
+else{
+
+
+}
+
+
+0   不及格  60   及格 70   良好  80  优秀 100  
+
+
+
+输入格式有误 
+isNaN()
+
+
+document 文档
+
+get 获取
+
+Element 元素 
+
+By  通过 按照
+
+Id id名 
+
+   document.getElementById("id名")
+驼峰规则 
+
+-----------------
+鼠标事件：
+onclick 单击
+onmouseover 鼠标划过
+onmouseout  鼠标离开
+
+btn.onclick=function(){
+
+实现的功能
+
+}
+
+
+
+
+表单的值的获取与赋值：
+
+document.getElementById("id名").value
+
+
+document.getElementById("id名").value=""
+
+
+DIV盒子的值的获取与赋值：
+
+document.getElementById("id名").innerHTML
+
+document.getElementById("id名").innerHTML=""
+
+计算器的应用：
+
+1）搭DIV结构
+
+2）获取计算按钮
+
+3） 单击按钮的时候：
+      获取第一个操作数的值 
+      获取第二个操作数的值
+      把操作数的值转化为数字
+      通过if语句判断是选中的何种运算符
+      进行 运算，输出值 
+
+数组：
+
+一组有序的数据序列。
+
+1403A
+
+1403A[0]="牛玉静"
+1403A[1]="张敏"
+1403A[2]="倪艺芮"
+1403A[3]="张婷婷"
+1403A[4]="李盼盼"
+
+
+var class1403A=["牛玉静","张敏","倪艺芮","张婷婷","李盼盼"]
+数组的长度 数组名.length
+
+
+
+获取单选框：
+
+
+ysf=document.getElementsByName("名字")
+获取的是一组数据
+
+ysf[0]
+ysf[1]
+
+ysf[ysf.length-1]
+
+
+_____________________________
+
+switch语句： 条件分支语句
+
+switch(变量名){
+   case  值1：
+    语句1;
+    break;
+  case  值2：
+    语句2;
+    break;
+ 
+  case  值3：
+    语句3;
+    break;
+
+default:
+
+ 语句N;
+
+
+}
+
+
+
+
+合并语句 ：
+
+switch(变量名){
+   case  值1：
+   case  值2：
+    语句2;
+    break;
+ case  值3：
+    语句3;
+    break;
+
+default:
+
+ 语句N;
+
+
+}
+
+
+1  10 号   上旬
+11  20    中旬
+21  30    下旬 
+
+60 不及格
+
+60  80  良好
+80  100  优秀 
+
+
+
+在switch 语句中使用任何数据类型 ，无论是字符串，还是对象都没有问题。
+每个 case 的值不一定是常量，可以是变量，甚至是表达式。
+
+default: default 关键字则用于在表达式不匹配前
+面任何一种情形的时候，执行机动代码。
+
+
+
+for(初始化表达式;控制表达式;循环后表达式){
+     循环体；
+ }
+
+for(初始化变量;条件表达式；增量）{
+循环体；
+}
+
+for(var i=1;i<=10;i++){
+
+
+}
+
+无限循环：
+for(var i=1;i<=10;){
+
+}
+for( ; ; ){
+
+}
+
+
+var i=1;
+
+for(;i<=10;){
+
+
+}
+
+for属于前测试循环。
+
+
+while 循环：前测试循环。
+
+变量赋初值
+ while(条件){
+
+循环体;
+增量
+}
+
+
+
+
+
+do- while 循环： 后测试循环
+
+至少执行一次循环体。
+
+do{
+循环体;
+增量；
+
+}while(条件)
+
+
+for in 循环：
+
+是一种精准的迭代语句，可以用来枚举对象的属性 。
+
+
+
+for( 变量i in  数组名){
+
+ 数组名[i]
+}
+
+退出语句： break 和 continue 语句用于在循环中精确地控制代码的执行。 其中， break 语句会立即退出循环，
+强制继续执行循环后面的语句。而 continue 语句虽然也是立即退出本次循环，但退出循环后会从循环的顶
+部继续执行。
+
+
+——————————————-
+函数 ：
+函数： 实现某一功能的多条代码或语句。
+可以在任何时候、任何地方调用 。（随时随地）
+
+上操流程{
+
+	1: 7:20 到操场 集合整队;
+	2: 7:40 站军姿 授旗；
+        3: 7:50 班长述职、文化书记述职
+        4: 8:00 院长讲话
+        5: 8:10 做操
+        6：8:20 喊口号
+        7: 8:30 回班级
+   
+
+}
+
+
+函数的定义：
+声明函数的关键字function
+
+
+函数声明：
+function  函数名(形式参数1，形式参数2.....){
+函数体；
+}
+
+
+调用函数：
+
+直接调用：js
+函数名(实际参数1，实际参数2....)
+
+鼠标事件调用 :html网页中 
+<input type="button"  value="计算"  onclick="函数名(实际参数1，实际参数2)">
+
+写在js里不带参数: DOM0事件处理程序
+
+btn.onclick=function(){
+
+
+}
+
+
+函数的返回值
+
+return 返回
+
+return  变量名;
+
+return之后的语句不执行。
+return 返回值是undefined. 
+
+
+任意个数相加的和
+
+3+4
+5+6+6
+7+9+5+6+7
+sum(3,4,5)
+
+sum(1,2)
+
+sum(4,56,7,44)
+
+
+arguments对象：
+
+
+函数的 参数在内部是用一个数组来表示的。函数接收
+到的始终都是这个数组，实际上，在函数体内可以通过 arguments 对象来
+访问这个参数数组，从而获取传递给函数的每一个参数。
+arguments.length  
+arguments[0]
+arguments[1]
+
+arguments[arguments.length-1]
+
+
+求和：
+
+如果传递过来的是一个参数则  让这个参数加100
+
+
+如果 传递过来的是2个参数  ，则让这两个参数和加200
+
+
+
+
+——----------
+函数没有重载
+
+函数不能重名，后写的函数覆盖先写的函数。
+
+function aa(){
+alert("你好")
+}
+
+function aa(a,b){
+alert(a+b)
+}
+
+aa()
+
+
+函数表达式：
+
+
+var 函数名=function(形式参数1，形式参数2...){
+
+}
+先定义再调用。。
+
+
+函数的作用域 执行环境 
+
+全局变量 可在全局环境中使用，可被任何函数使用 。
+
+局部变量  在局部环境中使用，不能被其他函数使用。
+
+
+
+BOM:浏览器对象模型 
+
+
+window对象：
+
+全局作用域：
+因此所有在全局作用域中声明的变量、函数都会变成 window 对象的属性和方法.
+
+window 对象同时扮演着 js中 Global 对象的角色.
+
+var  a=10
+
+console.log(a)
+console.log(window.a)
+
+框架:
+frame  
+frameset
+iframe
+在使用框架的情况下，浏览器中会存在多个 Global 对象。在每个框架中定义的
+全局变量会自动成为框架中 window 对象的属性。
+
+<iframe src="index.html" width="300" height="300"></iframe>
+
+
+
+框架集frameset
+框架 frame
+一般用于论坛、信箱、后台管理系统中实现。
+
+
+间歇调用：
+
+id名=setInterval(函数名,
+
+
+setInterval(function(){函数体},时间间隔毫秒）
+
+
+5张图片自动播放 
+
+arr=["1.jpg","2.jpg"]
+
+
+arr[0]
+arr[1]
+
+
+clearInterval(id名)
+
+超时调用：
+
+id=setTimeout(函数名,时间间隔毫秒)   只调用一次
+
+clearTimeout(id名)
+
+
+
+
+系统对话框：
+
+window. alert() 　　弹出框  警告框
+window. prompt(text,value)     输入框 
+window.confirm()    确认框  返回值：true  false   布尔值 
+
+alert()
+prompt()
+confirm()
+
+
+
+
+
+窗口的位置：
+IE、Safari、Opera 和 Chrome :
+
+window.screenTop
+window.screenLeft
+
+FF  IE、Safari、Opera 和 Chrome:
+window.screenX
+window.screenY
+
+窗口的移动：
+
+moveTo(x,y) 接收的是新位置的 x 和 y 坐标值
+moveTo(100,200)
+
+moveBy(x,y)接收的是在水平和垂直方向上移动的像素数
+moveBy(200,100)
+
+窗口的大小：
+
+浏览器窗口大小 
+window.outerHeight
+window.outerWidth
+
+可视区大小 ： 视口大小
+
+window.innerHeight
+window.innerWidth
+
+可视区的宽度和高度：
+document.documentElement.clientWidth
+document.documentElement.clientHeight 
+
+document.body.clientWidth
+document.body.clientHeight
+
+
+窗口的打开和关闭：
+
+
+wd=window.open("url","窗口名字","窗口特性width=150,height=120,fullscreen=yes")
+
+wd.window.close()
+ 
+
+location 对象：
+location 是最有用的 BOM对象之一，它提供了与当前窗口中加载的文档有关的信息，还提供了一些导航功能。
+
+获取地址栏信息
+location.href
+对地址栏信息赋值  超链接跳转
+location.href="http://www.baidu.com"
+
+
+
+
+navigator 对象:
+
+现在已经成为识别客户端浏览器的事实标准。 判断浏览器的版本和类型。
+
+
+screen对象：
+ 
+screen 对象基本上只用来表明客户端的能力.其中包括浏览器窗口外部的显示器的信息，如像素宽度和高度等。
+screen.width  屏幕宽度
+screen.height  屏幕高度
+
+
+history对象：
+历史记录
+前进    history.go(1)   go(4)   history.forward() 前进一步 
+后退    history.go(-1)  go(-3)  history.back()   后退一步
+  
+
+
+DOM:document object model
+
+
+DOM树
+
+
+节点之间的关系：
+
+父子关系：firstChild  lastChild   childNodes  childNodes.length   childNodes[0]
+ childNodes[1]   childNodes[2]      parentNode
+兄弟关系 ：nextSibling  下一个 previousSibling 上一个 
+
+节点的类型：12
+
+ 元素节点  1  
+ 属性节点  2
+ 文本节点  3
+ 注释节点  8
+ 文档节点  9
+获取属性节点：
+
+获取属性节点的值：
+getAttribute("属性名")  "bg" 值 
+设置属性节点的值：
+setAttribute("属性名","属性值"）
+删除属性节点的值：
+removeAttribute("属性名",'属性值')
+
+
+节点属性：
+节点的类型　  节点的名字　　　            节点的值　
+nodeType      nodeName                    nodeValue
+
+元素节点 1     head  div  h1(元素名)       null
+
+文本节点 3     #text                        文本本身
+
+属性节点 2    class href  id（属性名）      属性值
+
+
+
+节点的方法：
+一、
+节点的查找方法：
+1)document.getElementById("id名")   唯一一个
+
+功能：返回对拥有指定 ID 的第一个对象的引用
+返回值：DOM对象
+
+2)元素名： 
+ document.getElementsByTagName("标签名")  查找到的是一组数据nodeList
+length 个数
+
+功能：返回一个对所有tag标签引用的集合
+返回值：数组
+
+3)document.getElementsByName("name名字") 查找到的是一组数据 nodeList
+aa.length
+
+功能：返回一个对所有name名引用的集合
+返回值：数组
+
+4）document.getElementsByClassName("name名字")
+
+
+二、改变样式：
+1）语法：ele.style.styleName=styleValue
+功能：设置ele元素的CSS样式
+
+box.style.属性名="属性值"
+font-size  fontSize  驼峰规则
+
+2）语法：ele.className
+   功能：获取ele元素的class属性
+
+  语法：ele.className=”cls”
+  功能：设置ele元素的class属性为cls
+
+  box.className="样式名"
+  box.className=""
+
+  手风琴效果
+
+
+二、改变内容：
+1）语法：对象.innerHTML
+功能：返回e元素开始和结束标签之间的 HTML
+
+语法:对象.innerHTML="内容"
+功能：设置元素开始和结束标签之间的 HTML内容为html
+
+innerHTML     获取元素节点里的内容（包含标签）;
+innerText     获取元素节点里的文本内容（不包含标签）;
+
+  大乐透
+三、改变属性：
+
+1）DOM中HTML属性(特性):
+
+      标准属性  href  id  title  class  checked  src
+        
+      获取属性：
+           元素.属性名
+
+      设置属性：
+           元素.属性名=属性值
+               .checked=true
+               .title="标题"
+               .src=""
+               .className="bg"  //特殊
+      自定义属性  data-time="2015/12/2"  data-pic="";
+  
+
+      元素.属性名 无法获取和改变自定义属性的值。
+
+          
+    获取属性:
+        语法：ele.getAttribute(“attribute”);
+        功能：获取ele元素的attribute属性
+
+        元素.getAttribute("属性名") 
+    设置属性:
+        语法：ele.setAttribute(“attribute”,value)
+        功能：在ele元素上设置属性
+
+        元素.setAttribute("属性名","属性值")
+    删除属性：
+
+        语法：ele.removeAttribute(“attribute”)
+        功能：删除ele上的attribute属性
+
+        元素.removeAttribute("属性名")
+
+   既可以设置标准属性，也可以设置自定义属性。
+
+
+ 单选 全选 反选  
+
+
+插入节点：
+创建文本节点 
+var text=document.createTextNode("文字信息")
+创建元素节点：
+var 元素名=document.createElement("元素名")
+
+
+父节点.appendChild(子节点)
+
+子节点作为父节点的最后一个元素存在。
+
+
+父节点.insertBefore(新节点，哪个节点之前)
+
+可以做图片切换
+
+
+删除节点 ：
+
+父节点.removeChild(子节点)
+
+
+替换节点：
+父节点.replaceChild(新节点，要替换的节点)
+
+
+
+
+增 删 改 查 
+
+复制节点：
+克隆节点
+
+
+  要复制的节点.cloneNode()  false  不写  只复制结构，不复制内容
+ 
+  要复制的节点.cloneNode(true )  true   既复制结构也复制内容。
+
+
+<ul>
+	<li>11111111111</li>
+	<li>2222222222</li>
+</ul>
+————————————
+
+
+DOM可以改变样式、内容。
+
+html网页信息:
+.innerHTML    
+
+识别的文字信息            
+.innerText   ff不识别
+
+改变样式：
+
+
+box.style.属性名="属性值"
+
+font-size  fontSize  驼峰规则
+
+
+box.className="样式名"
+
+box.className=""
+
+
+文档输入：输出流写入到网页的能力
+document.write()
+document.writeln()  空格的距离
+open（）
+close()
+
+
+
+
+_____________________
+
+事件:
+
+鼠标事件：
+
+onclick   单击
+onmouseover  鼠标滑过
+onmouseout   鼠标离开
+
+onmousedown  鼠标按下
+onmouseup    鼠标释放
+
+
+ondbclick  双击 
+
+onmousemove  鼠标移动
+
+onmouseenter  鼠标进入
+onmouseleave  鼠标离开  
+
+键盘事件
+
+keydown    任意键
+keypress   字符键
+
+keyup      释放
+
+
+UI事件类型：
+
+load  加载
+unload  卸载 
+error  错误
+select 文本框选中 
+resize 重调窗口大小 
+scroll 滚动条
+
+<body onload="cc()"  onunload="dd()">
+
+btn.onselect=function(){
+btn.value=""
+}
+
+焦点事件：
+
+focus 获取焦点
+blur  失去焦点
+
+
+事件：文档或浏览器窗口中发生的一些特定的交互瞬间。
+
+事件流：页面接收事件的顺序。
+
+IE：事件冒泡   ：即事件开始时由最具体的元素（文档中嵌套层次最深
+的那个节点）接收，然后逐级向上传播到较为不具体的节点（文档） 。
+
+
+事件捕获：事件捕获的思想
+是不太具体的节点应该更早接收到事件，而最具体的节点应该最后接收到事件。
+
+事件捕获的用意在于在
+事件到达预定目标之前捕获它。
+
+
+DOM事件流：
+“DOM2级事件”规定的事件流包括三个阶段：事件捕获阶段、处于目标阶段和事件冒泡阶段。
+
+
+
+事件就是用户或浏览器自身执行的某种动作。click  mouseover 
+
+事件处理程序：响应某个事件的函数。事件处理程序的名字以 "on" 开头。
+
+
+
+HTML事件处理程序
+<input type="button"  onclick="aa()">
+
+
+DOM0级事件处理程序
+btn.onclick=function(){
+
+}
+
+DOM2级事件处理程序
+
+
+数组：
+
+数组特性：
+      数据的有序列表。
+      数组的大小可以动态调整
+      数组的每一项可以保存任何数据类型
+
+数组的创建：
+       
+      字面量法：
+      arr=[1,2,5,6,7]
+      arr=[]  
+      构造函数法：
+      var  arr=new Array(3)
+
+      var arr=new Array()
+
+数组的赋值 ：
+arr[0]=
+arr[1]=
+
+数组属性：length
+          获取数组长度及改变数组长度
+数组方法：
+
+转换方法：
+toString()   字符串  
+valueOf()    数组  对象  返回的是数组本身
+join("/")     用不同的分隔符连接数组的每一项。 转化为字符串
+
+
+插入和删除方法：
+
+1）栈的方法：后进先出   last in  first out
+追加一个元素 数组的最后
+数组名.push(值)  返回值是数组的长度
+删除一个元素
+数组名.pop()    返回值是删除的元素
+
+改变的是数组自身
+
+2)队列的方法：
+追加到最前面
+数组名.unshift(值)  返回的是数组的长度
+删除元素
+数组名.shift() 返回值是删除的元素
+
+
+3)排序的方法：
+
+arr.reverse() 颠倒前后顺序
+arr.sort()  按照大小顺序排。
+
+
+不生成新数组，改变的是数组本身。
+
+4)
+数组的连接方法：
+
+数组名1.concat(数组名2，数组名3......)
+
+生成一个新数组，不会改变数组本身。
+
+5)查找子数组方法：
+
+数组名.slice(开始下标，结束下标) 包含开始下标， 不包含结束下标
+
+数组名.slice(开始下标) 从开
+始下标到数组的最后一个元素。
+              start end
+
+下标可以是负值，-1最后一位，-2倒数第2位
+
+生成一个新数组，不会改变数组本身。
+
+6)
+splice（）方法：
+
+删除子数组  数组名.splice(开始下标，长度)    返回值是要删除的子数组。
+ 
+            数组名.splice(开始下标）删除开始下标之后的所有数组对象 。
+
+添加子数组  数组名.splice(开始下标，0，值1，值2....)
+
+替换子数组： 数组名.splice(开始下标 ，长度，值1，值2....)
+
+
+7)  位置方法：
+indexOf()方法：
+返回某个指定的字符串值或者某个数组元素值在字符串或者数组中首次出现的位置。
+找不到返回-1.
+数组名.indexOf(val,开始下标);
+
+
+lastIndexOf(val,开始下标):
+返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索
+数组名.indexOf(val,开始下标);
+
+
+------------------
+string类型：是字符串的对象包装类型。
+
+var  str="hello wellcome to bawei"
+var  str=new String("info here")
+
+字符串属性：
+length
+str[i] 
+
+
+
+字符串的方法:
+1）清空字符串前后空格的方法：
+字符串.trim()
+  清除空格不能改变字符串自身。生成一个字符串的副本
+
+
+2）字符方法：
+字符串.charAt(下标)    返回的是字符串中特定位置的字符。
+字符串.charCodeAt(下标)返回的是字符串中特定位置的字符的ascii码值
+
+3）字符串的位置方法：
+
+字符串.indexOf(“子字符串”，开始下标)  子字符串在父字符串的位置，返回第一次出现的下标，如果查不到，返回-1.
+字符串.lastIndexOf()  从后往前查找第一次出现的位置，返回其所在下标，如果查不到，返回-1.
+
+
+4）字符串的大小写转化方法：
+
+转化为大写的: 字符串.toUpperCase()   字符串.toLocaleUpperCase()
+转化为小写的：字符串.toLowerCase()   字符串.toLocaleLowerCase()
+
+5）查找子字符串的方法：
+
+字符串.slice(开始下标，结束下标)  开始下标到结束下标前一位。 下标可以是负数
+字符串.slice(开始下标)                   开始下标到结束。
+
+字符串.substr(开始下标，长度)    开始下标起，查找长度位。 开始下标可以是负值，长度如果是负值会转化为0。
+字符串.substr(开始下标);        
+
+字符串.substring(开始下标，结束下标) 开始下标到结束下标前一位。
+字符串.substring(开始下标)               下标不能是负数 如果是负数，自动转化为0.
+
+
+6）替换方法：
+字符串.replace(替换的内容，替换为的内容)
+创建新字符串，原来字符串不变
+
+7）连接方法；
+字符串.concat(字符串1......)
+
+1、长度6-12之间
+2、第一位必须是字母
+3、其它位只能是字母或数字。
+
+8）切割字符串  或分割字符串方法：
+
+split("")    一个字符一个字符的分割为数组
+split("分隔符" )  以分隔符分割。
+split()    数组中就一个元素
+
+贵妃酸辣粉,烙饼卷带鱼,红烧肉,粉蒸排骨,大拌菜,酸汤洄鱼,珍珠丸子
+ 
+
+——————————————————————————————
+
+
+数学对象：
+
+Math对象
+
+Math的属性：
+Math.PI
+Math.E
+Math.LN10
+Math.LOG2E
+Math.LOG10E
+Math.SQRT2
+Math.SQRT1_2
+
+方法：
+
+1)最大值最小值方法：
+Math.min()  
+Math.max()  
+
+语法：Math. min(num1,num2...numN)
+功能：求一组数中的最小值;
+返回值：Number;
+
+语法：Math. max(num1,num2...numN)
+功能：求一组数中的最大值;
+返回值：Number;
+ 
+例子：
+Math.min(1,24，6)   1
+Math.max(1,4,-7) 4
+Math.min(3,4,6,'admin') NaN
+Math.max(3,4,'10'); 1
+
+2)舍入方法：
+
+Math.ceil()    向上取整
+Math.round()   四舍五入取整
+Math.floor()   向下取整
+
+语法:Math.ceil(num)
+功能： 向上取整 ,返回大于num的最小整数
+返回值：number
+
+语法:Math.floor(num)
+功能： 向下取整 ,返回num的整数部分
+返回值：number
+
+
+语法:Math.round(num)
+功能： 将数值四舍五入最接近的整数
+返回值：number
+
+3)语法：Math.abs()  
+功能：绝对值
+返回值:number;
+
+4)random随机数的方法:
+Math.random()  [0  ,1) 随机数。
+
+Math.random() *10       [0  10] 随机整数  
+
+[50  100]   随机整数
+规律：
+Math.floor(Math.random()*(大值-小值+1)+小值)
+获取n 到 m之间的随机整数
+
+
+附加方法：
+Math.pow(3,5) 幂的方法
+Math.sqrt(100) 平方根
+
+
+
+日期对象
+
+创建日期对象:
+var now = new Date();
+
+有初始值的时间：
+var now=new Date(年, 月, 日,时，分，秒);
+var  now=new Date(毫秒)
+
+
+Date 类型保存的日期能够精确到1970 年1月1 日之前或之后的285 616 年。
+获取的方法：
+getTime()     返回表示日期的毫秒数；与valueOf()方法返回的值相同
+getFullYear() 取得4位数的年份（如2007而非仅07）
+getMonth()    返回日期中的月份，其中0表示一月，11表示十二月
+getDate()     返回日期月份中的天数（1到31）
+getDay()      返回日期中星期的星期几（其中0表示星期日，6表示星期六）
+
+getHours()    返回日期中的小时数（0到23）
+getMinutes()  返回日期中的分钟数（0到59）
+getSeconds()  返回日期中的秒数（0到59）
+getMilliseconds() 返回日期中的毫秒数
+
+设置的方法：
+setTime(毫秒)   以毫秒数设置日期，会改变整个日期
+setFullYear(年) 设置日期的年份。传入的年份值必须是4位数字（如2007而非仅07）
+setMonth(18)    设置日期的月份。传入的月份值必须大于0，超过11则增加年份
+setDate(33)   设置日期月份中的天数。如果传入的值超过了该月中应有的天数，则增加月份
+setHours(时)    设置日期中的小时数。传入的值超过了23则增加月份中的天数
+setMinutes(分)  设置日期中的分钟数。传入的值超过59则增加小时数
+setSeconds(秒)  设置日期中的秒数。传入的值超过了59会增加分钟数
+setMilliseconds(毫秒) 设置日期中的毫秒数
+
+
+10天后是星期几?
+
+1 软件使用 
+
+ctrl+shift+p  html
+
+html5结构: !  tab
+
+ul>li{内容}*5 tab
+
+光标定位到指定的多个位置 ctrl
+
+选中多个  ctrl+d
+
+预览：右键复制文件路径
+
+
+2、DOM高级
+
+
+1查找节点
+
+1)  getElementById(id名)  id名
+2)  getElementsByTagName(标签名)  nodeList 节点列表  数组   [0]
+3)  getElementsByName(name名)  表单  nodeList 节点列表  数组   [0]
+4） getElementsByClassName(样式名)  IE9以下浏览器不兼容  报错
+5） css选 择器    IE9以下浏览器不兼容
+ [id选择器   类选择器  标签选择器]
+    querySelector(css选择器)    只能获取第一个元素
+    querySelectorAll(css选择器)  获取所有的元素 ，nodeList 数组
+6）特殊的集合
+   document.forms 获取所有的表单元素 等价于document.getElementsByTagName("form")
+   elements  获取所有的表单对象元素 nodeList数组  elements[0] 获取的第一个表单元素
+   elements.length 表单元素的个数
+
+   document.images  获取页面中所有的图片  等价于document.getElementsByTagName("img")
+创建图片标签 var ing=new Image;
+   document.links   获取所有带href属性的超链接 
+等价与 document.getElementsTagName(“a”)
+   document.anchors  获取所有带name属性的超链接
+
+
+2、节点方法:
+
+   增删改查
+
+   插入节点
+
+    父节点.appendChild(子节点)
+    父节点.insertBefore(新节点，哪个节点前)
+
+  创建节点
+    
+    创建文本节点  document.createTextNode(文本)
+    创建元素节点  document.createElement(元素名)
+
+  删除节点
+    
+    父节点 .removeChild(子节点)
+
+  替换节点
+    
+    父节点.replaceChild(新节点，要替换的节点)
+
+  复制节点（克隆节点）
+
+     要复制的节点.cloneNode() false  只复制结构不复制内容
+                              true   结构 内容都复制
+
+
+3、 DOM中HTML属性(特性):
+
+      标准属性  href  id  title  class  checked  src
+        
+      获取属性：
+           元素.属性名
+
+      设置属性：
+           元素.属性名=属性值
+               .checked=true
+               .title="标题"
+         .src=""
+               .className="bg"  //特殊
+
+
+    
+     自定义属性  data-time="2015/12/2"  data-pic=""    
+  
+      元素.属性名 无法获取和改变自定义属性的值。
+
+          
+    获取属性:
+     元素.getAttribute("属性名") 
+    设置属性:
+     元素.setAttribute("属性名","属性值")
+    删除属性：
+     元素.removeAttribute("属性名")
+
+   既可以设置标准属性，也可以设置自定义属性。
+    
+4、节点属性：
+
+   节点类型  nodeType  1元素节点  2属性节点 3文本节点  8 注释节点  9 文档节点
+   节点名称  nodeName   标签名     属性名    #text
+   节点值    nodeValue   null      属性值   文本本身
+
+5、节点之间的关系:
+   
+   parentNode  父节点  子节点 childNodes.length childNodes[0]   firstChild  lastChild childNodes[childNodes.length-1]
+    
+  兄弟节点   下一个兄弟节点 nextSibling 上一个兄弟节点   previousSibling
+
+
+————————————————————————
+
+DOM表格操作
+
+table : thead  一个 
+        tbody  多个
+        tfoot  一个
+
+查找表格的元素：thead  tbody  tfoot  cells  rows
+
+//获取表头 对象.tHead   一个
+//获取表尾 对象.tFoot    一个
+//获取主体部分 对象.tBodies 多个 nodeList 数组
+//获取行   对象.rows nodList 数组 rows[0]
+//获取单元格  对象.cells nodeList 数组 cells[0]
+
+//插入行  对象.insertRow(index)
+//插入单元格  对象.insertCell(index)
+
+//删除行  对象.deleteRow(index)
+//删除单元格 对象.deleteCell(index)
+
+1全选：
+
+_______________________________
+
+css样式的问题：
+
+行内样式
+
+  获取样式：
+   
+     节点.style.css属性
+     节点.style[css属性]  常量直接写 ，变量呢？[变量名]  变量或者参数。
+
+  返回值： 是一个带单位的字符串
+
+  设置样式：
+  节点.style.css属性=值
+  节点.style[css属性]=值
+
+  
+非行内样式：
+
+获取非行内样式
+
+   标准浏览器（非IE）
+   getComputedStyle(obj,null).css属性 
+   getComputedStyle(obj,null)[css属性]
+
+   IE浏览器下
+ 
+    obj.currentStyle.css属性
+    obj.currentStyle[css属性]
+
+function getStyle(obj,style){
+  
+  if(obj.currentStyle){
+     
+     return  obj.currentStyle[style]
+        
+  }
+  else{
+   
+     return  getComputedStyle(obj,null)[style]
+  }
+
+}
+
+
+------------------------------
+
+元素大小,  js盒模型 返回值：   只能获取不能设置，没有单位，是数值类型。
+
+偏移量：元素在屏幕上占用的所有可见空间。
+
+尺寸：  offsetWidth     元素自身的宽度   width+border+padding
+        offsetHeight    元素自身的高度   height+border+padding
+
+位置：  offsetLeft     元素左边框距离父元素的距离（如果没有定位，就是相对于浏览器窗口。如果有定位，是对有定位的父级元素）
+        offsetTop      元素上边框距离父元素的距离
+
+
+客户端（客户区）大小
+
+      clientWidth   width+padding
+      clientHeight  height+padding
+
+      (浏览器窗口大小） 可视区大小  视口
+
+宽度：document.documentElement.clientWidth
+高度：document.documentElement.clientHeight
+    
+宽度  document.documentElement.clientWidth  ||  document.body.clientWidth
+
+高度  document.documentElement.clientHeight ||  document.body.clientHeight
+
+
+滚动大小  包含滚动内容的元素大小。
+
+    scrollTop   滚动条向上滚动的距离
+    scrollLeft  滚动条向左滚动的距离
+
+         top=     document.documentElement.scrollTop  ||  document.body.scrollTop
+  document.documentElement.scrollTop=0
+  document.body.scrollTop=0
+    
+    scrollWidth   在没有滚动条的情况下，元素内容的总宽度。
+    scrollHeight  在没有滚动条的情况下，元素内容的总高度。
+
+_____________________
+
+
+事件：
+
+事件的概念：文档或者浏览器窗口中发生一些特定交互瞬间。（用户或者浏览器自身执行的某种动作）
+事件流：  页面接收事件的顺序。
+          IE  微软公司：事件冒泡流
+          N 网景公司：  事件捕获流
+DOM2事件流分三个阶段：事件捕获阶段，处于目标阶段，事件冒泡阶段
+
+
+事件对象: 所有与事件相关的信息。事件的类型  鼠标的位置  事件的目标
+
+
+阻止冒泡： DOM下：   event.stopPropagation()   IE: event.cacelBubble=true 
+阻止默认行为： DOM下： event.preventDefault()  IE: event.returnValue=false  return false     
+ 1）如何访问事件对象？
+   
+    标准浏览器下 DOM中：作为函数的第一个参数存在
+    IE浏览器中  IE中： 作为window对象的属性存在 window.event
+             
+         function(e){}
+         var event=e(第一个参数） || window.event              
+   
+
+2)  动作：
+      阻止事件冒泡行为
+  标准浏览器下 DOM中 : event.stopPropagation()   停止传播
+        IE浏览器下：         event.cancelBubble=true   取消冒泡
+
+     跨浏览器兼容阻止冒泡：
+      function stopPropagation(e){
+
+            if(e.stopPropagation){
+               e.stopPropagation()
+       }
+              else{
+              e.cancelBubble=true
+       }
+                 
+               
+        }
+       
+——————————————
+3）动作：
+    阻止默认行为
+    DOM中：event.preventDefault()  阻止默认行为
+    IE中:  event.returnValue=false  返回值=false  // return  false 
+
+     function  preventDefault(e){
+          if(e.preventDefault){
+               e.preventDefalut();
+           }
+         else{
+              e.returnValue=false
+  }
+    }
+
+
+4) type  事件类型  click  mouseover  mouseout  
+ 
+   语法格式：event.type  
+   返回值： click  mouseover  mouseout  
+
+
+5) 事件目标  :你实际操作的目标对象 ，不一定是你绑定事件的对象
+    target
+   
+    DOM: event.target
+    IE:  event.srcElement
+         
+          target=event.target ||  event.srcElement
+
+   
+6)事件委托：利用冒泡的原理，只指定一个事件处理程序，就可以管理某一类型的所有事件。
+  
+    鼠标划过多li添加背景，鼠标离开删除背景。
+
+
+7）事件对象的在浏览器中坐标  水平 event.clientX    垂直坐标 event.clientY
+   事件对象在屏幕上的坐标    水平  event.screenX   垂直坐标 event.screenY
+
+
+事件对象的属性：
+访问事件对象event=e || window.event
+
+类型 event. type   目标:event.target || event.srcElement  鼠标的位置： event.clientX  event.clientY
+
+方法：阻止冒泡 ，阻止默认行为
+
+
+事件处理程序：
+  
+HTML事件处理程序： 在HTML中绑定的事件。缺点：不能实现行为和结构的分离。
+DOM0事件处理程序：  
+优点：简单， 跨浏览器兼容。
+缺点： 不能同时绑定多个事件。
+添加（绑定）：
+      语法：对象.on事件类型=fn;
+      说明：
+        fn 匿名函数也可以是有名函数；
+                              btn.onclick=function(){}
+                              btn.onclick=say  只写函数名
+  
+                         
+           
+删除：
+      语法：对象.on事件类型=null;
+
+
+DOM2事件处理程序：
+优点：同时绑定多个事件处理程序。
+添加(绑定）             语法：对象.addEventListener(事件名，函数，布尔值)  false 冒泡阶段 true 捕获阶段 
+删除：                  语法：对象.removeEventListener(参数与添加的参数完全相同)                  //不能删除匿名函数
+
+
+
+IE事件处理程序：  
+优点：同时绑定多个事件处理程序。
+添加                   语法： 对象.attachEvent(on+事件名,函数)
+删除：                 语法： 对象.
+
+(on+事件名，函数)  参数与添加的的时候完全一样
+
+
+跨浏览器的事件处理程序:
+                      addHandler()
+
+
+
+3、事件类型： 
+       UI事件：不一定与用户操作有关
+       load  unload scroll  error  resize  select
+       
+  window.onload=function(){  }
+      resize 
+
+    添加样式:
+    对象.style.cssText="color:red;font-size:12px; background:red"
+    对象.style.background=''
+        
+      焦点事件:
+        focus  获取焦点事件
+        blur   失去焦点事件
+
+        
+     键盘事件：
+        keydown     按下任意键时，触发
+        keypress    按下字母键时候，触发
+        keyup       释放按键的时候，触发
+        
+
+        keyCode  获取按键的ascii码  
+
+        回车键    13
+        空格键     32
+        A-Z        65-
+        0-9        48 
+        左上右下   37  38 39  40
+        
+    鼠标事件：
+
+        click
+        mouseover  划过
+        mouseout   离开
+
+        mousedown
+        mouseup
+        mousemove
+
+        dbclick
+        mouseenter  进入  不冒泡
+        mouseleave  离开  不冒泡
+
+        
+_______________________________________
+
+表单：
+
+表单的提交和重置的方式：
+
+1)    提交的三种方法   <input type="submit" value="提交">   按钮提交
+          <input type="image" src="">          图像域 提交
+                 <button type='submit'>提交</button>  自定义提交按钮 
+  
+      表单提交的方法:   表单对象.submit()
+
+
+2)  重置,reset 与提交一样。 reset()
+
+
+
+表单元素的事件：
+          
+      blur
+      focus
+
+      change   select下拉列表框内容发生改变的时候
+               text textarea 对文本框和文本域来说，是内容发生改变并且取消焦点的时候
+
+
+select：
+
+                选中：selected
+
+                
+                获取选中的索引   select.selectedIndex  
+         
+
+                value的取值意义： select.value  获取的是<option value="值1">值2</option>.优先获取的是value="值1"，如果
+
+                 没有值1，获取值2。
+                     
+                
+
+表单元素的三个方法： 
+                focus()
+                blur()
+                select()
+
+   
+select 属性： 
+
+            multiple   多选 
+            size       长度 个数 
+            options    返回的是一个数组 
+            select.options.length
+      select.options[index]
+             
+option 属性：
+
+          options[index].text  文本
+          options[index].value 值
+          options[index].index  下标
+          selected 选中 
+
+
+
+创建option元素：  new Option(text,value)
+添加option元素：  select.add(newOption,undefined)
+删除option元素：  select.remove(index)
+             
+
+删除所有的option 有两种方法:  select.innerHTML=''   select.options.length=0
+     
+________________________
+
+  JS2
+
+正则表达式：由字母、数字、特殊符号构成的描述字符模式的表达式。
+
+功能：1.模式的匹配
+      2.文本的检索
+      3.替换功能。
+
+;.
+创建正则表达式：
+
+一、创建：
+
+1）显式创建   用构造函数的    var reg=new RegExp('表达式')    数据类型：对象类型
+           var reg=new RegExp('表达式','修15:54 2016/8/10饰符')  i
+2) 隐式创建   直接量语法     /表达式/     包含在一对/斜杠之间的字字符    表达式没有引号
+
+
+二、正则表达式的方法：
+
+  1)   test() 
+                功能：用于检测内容是否与正则相匹配
+    返回值：布尔值，true匹配，false不匹配
+    语法：reg（Object）.test(内容)
+  
+ 
+  2）  exec()   
+                功能：用于检测内容是否与正则相匹配
+                返回值:能匹配成功 数组  不匹配  null
+                语法： regObject.exec(内容) 
+
+                 说明：数组的第一个元素：匹配的内容
+                       数组的index元素： 匹配内容的第一个字符索引下标
+                       数组的input元素:  原始字符串
+                       数组的第二个元素到 index元素之间的：是分组的匹配的内容 ()+  (){3,4}.如果没有undefined
+
+
+
+
+三、 修饰符：
+     修饰符：
+  i  忽略大小写
+  m  多行匹配
+  g  全文匹配
+
+四、 元字符
+      
+        [....]   匹配括号内的任意一个字符   [0123456789]  [abc]  [0-9]  [a-z]  [A-Z]   [0-9]{6}
+        [^....]  匹配除了括号内的任意字符   
+
+        \d   代表数字  [0-9]
+        \D   非数字    [^0-9]
+        \w   代表的是字母数字下划线 [a-zA-Z0-9_] 
+        \W   代表的是非字母数字下划线 
+         .   除了换行符以外任意字符
+        \s   空格字符
+        \S   非空格字符
+        \b   单词的边界   
+        \n 
+        \t
+        \r
+        
+     
+
+
+
+
+五、重复:  设置重复的次数
+
+       {n}   匹配前一项n次
+       {n,m} 匹配前一项最少n次，最多m次  用户名只能是数字 长度在5-12之间  reg=/[0-9]{5,12}/
+       {n,}  匹配前一项最少n次
+        
+  ？ 匹配0到1次   {0,1}
+  +  匹配1到多次  {1，}
+  *  匹配0到多次  {0，}
+
+六、限定符：
+     
+      ^XX  以^开头
+      XX$  以$结束
+
+七、转义字符：
+
+    语法：\元字符
+
+    元字符： [ ]  {}   ()  ? *  +  /  ^  $  .  
+ 
+附加:
+
+选择：|或者 
+
+分组():将多个匹配项组合为一个整体
+
+汉字：[\u4e00-\u9fa5] 有事100  有酒罚我
+      [\x00-\xff]      单字符
+      [^\x00-\xff]     双字符
+
+
+
+
+
+字符串的方法：
+     replace() :
+     语法：str.replace(要替换的(旧),替换为的(新的))
+     功能：替换掉符合匹配的字符串。
+     返回值:是一个新字符串，原字符不变。
+     要替换的：可以是字符串 也可以是正则表达式,支持全文匹配  
+     练习：替换法轮功
+
+    split():  把字符串转化位数组
+    str="aaa   ， bbb， ccc"
+    
+    str="6226  7895  454544 3443"
+      语法：str.split('分隔符')
+      返回值：数组,原字符串不变
+
+
+   search()：  返回匹配字符串的下标。
+   
+  语法：str.search(reg/字符串)
+   
+    
+  match(): 返回匹配字符串的值。
+  语法格式：str.match(reg/字符串)   
+  返回值：如果没有全局匹配的话；找到了返回第一个，数组。 找不到返回null
+          如果全局匹配的化， 找不到null. 找到了返回所有的，数组。 
+  
+  
+  
+  str="aaa bbb ccc"  每个单词的第一个字母变成大写
+  str1='Aaa Bbb Ccc'
+
+
+
+________________________________
+
+  //作用域链 :
+      //从里往外依次寻找，一直到到全局变量。但是不能从外往里找变量。
+        //匿名函数
+
+//函数表达式  ：先定义后执行
+//匿名函数的自执行   (要执行的匿名函数)(匿名函数的执行)
+
+闭包：就是能够读取其他函数内部变量的函数，
+只有函数内部的子函数才能读取局部变量，
+因此可以把闭包简单理解成“定义在一个函数内部的函数”.
+
+
+闭包的优点：
+1、读取函数内部的变量
+2、让函数内部变量的值始终保持在内存中。
+
+闭包的缺点：
+
+1、由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大。
+2、在IE中可能导致内存泄露。
+3、闭包会在父函数外部，改变父函数内部变量的值，不要随便改变父函数内部变量的值。
+
+闭包只能使用包含函数中任何变量的最后一个值（最终值）。
+
+一般情况，要把销毁，等待释放，垃圾回收。
+
+
+_________________
+对象：由属性和方法构成。
+  属性：
+      属性即变量，用于存取数据。
+
+  方法：
+    方法即函数，用于完成特定功能。
+
+对象分类：
+  全局对象、内置对象及自定义对象。
+
+  内置对象包括：
+  string字符串对象 
+  Math数学对象  
+  Array数组对象  
+  Date日期对象 
+  RegExp正则表达式对象
+
+
+  全局对象:即window对象。
+  全局对象的函数（方法）：
+    isNaN()   isFinite()   paseInt()  paseFloat()   
+    alert() confirm()  setInterval() setTimeout() clearInterval() clearTimeout()  
+
+
+创建自定义对象
+  1、通过Object()构造函数或字面量方式创建
+    （1）通过Object()构造函数  显示创建
+    语法：var 对象名=new Object();
+
+    (2)通过字面量（隐式创建）
+    语法：var 对象名={};
+
+
+    添加属性和方法：
+      添加属性：对象名.属性名=属性值;    
+      添加方法：对象名.方法名=function(){};  
+
+    第二种方式：
+      将添加的属性和方法放到字面量{}中。
+        属性名：属性值,
+        方法名:function(){}
+    注意：属性与属性与方法之间用逗号隔开
+
+    在自定义对象中this即该对象。
+  第一种方式适用于创建单个对象，单体对象。
+
+  缺点：使用同一个接口创建很多对象，会产生大量的重复代码。
+
+  2、工厂模式
+            定义：
+          function createObj(name,sex,age){
+                 var o=new Object()
+                     o.name=name;
+                     o.sex=sex;
+                     o.say=function(){
+                        alert("你的名字是"+this.name+"你的性别是"+this.sex);
+                          }
+
+               return  o
+    }
+         
+        调用： var p1=createObj("张三","男",19)
+
+                   p1.constructor 指向不到createObj
+
+        工厂模式缺点：没有解决对象识别的问题 
+
+         如何检测一个的对象的构造函数是谁呢？ constructor  构造函数
+
+
+     3、构造函数的模式
+         定义：
+           function CreateObj(name,sex,age ){
+                 this.name=name; 
+                 this.sex=sex;
+                 this.age=age;
+                 this.say=function(){
+                    alert("你的名字是"+this.name+"你的性别是"+this.sex);
+                  }
+
+             }
+        
+         调用：
+           var p1=new CreateObj("张三","男"，18)
+           var p2=new CreateObj("李四","女"，20) 
+
+         var arr= new Array()
+         var time= new Date()
+         var reg= new RegExp()
+         var str= new String()
+
+   构造函数模式与工厂模式的区别：
+    1、没有显式地创建对象；
+    2、直接将属性和方法赋给了this 对象；
+    3、没有return 语句。
+    4、通常构造函数名始终以大写字母开头，非构造函数名不以大写字母开头
+
+
+
+
+   构造函数的缺点：
+    使用构造函数模式创建对象的问题：每个方法都要在每个实例上重新创建一遍，浪费内存空间
+
+  人（对象）   丁丁 （实例）
+
+
+
+
+用构造函数创建一个对象的过程会经历4个步骤：
+(1) 创建一个新对象；  new Person()
+(2) 将构造函数的作用域赋给新对象（因此this 就指向了这个新对象）； this= p1  this =p2
+(3) 执行构造函数中的代码（为这个新对象添加属性）；
+(4) 返回新对象
+
+
+
+   4、原型的模式
+
+     1)原型对象是什么
+
+    每个函数都有一个prototype（原型）属性，这个属性是一个指针，  指向一个对象，这个对象即原型对象.
+
+    使用原型对象优点：是可以让所有对象实例共享它所包含的属性和方法
+
+   
+   2）如何创建原型对象
+    构造函数名.prototype.属性名=值
+    构造函数名.prototype.方法名=function(){
+ 
+     }
+ 
+  其中：值可以为简单值(数值，字符串等)，也可以是函数(即方法).
+
+  3） 多个对象实例共享原型所保存的属性和方法的基本原理:
+
+   搜索-->对象实例-->原型对象
+
+  对象实例添加某个属性只会阻止我们访问原型中的那个属性，但不会修改原型中的那个属性值
+
+  原型中的是属性和方法是所有实例共享的，他的添加顺序不影响实例的调用。
+ 
+  4） 检测某个对象实例和原型之间是否存在对应关系：isPrototypeOf()
+       
+     构造函数名.prototype.isPrototypeOf(实例)
+     Person.prototype.isPrototypeOf(p1)   存在关系true  不存在关系 false
+          
+
+    var  arr=new Array()
+
+ 5)检测一个属性是存在于实例中，还是存在于原型中：hasOwnProperty()
+    语法格式：实例名.hasOwnProperty(属性)   属性属于实例，返回真，属于原型返回假。
+  例如：p1.hasOwnProperty("name")
+
+6）确定原型和实例的关系
+  实例名 instanceof  构造函数名  返回值：true  false 
+
+
+
+-------------------
+
+继承：原型链继承 
+      subTye.prototype=new SuperType()  //子类型的原型指向父类型的对象实例  缺点：不能传参数  来自于包含引用类型值的原型。
+      借用构造函数继承 
+      function SubTye(name,sex){    // 或者对象冒充  伪造对象
+      SuperType.call(this,name,sex)
+      SuperType.apply(this,数组名) 
+         }
+      组合继承:
+      原型链和借用构造函数继承一起使用
+
+
+ 错误处理和调试：
+
+       error: 错误事件
+              加载对象 window  第二个img 当图片无法加载的时候
+        window.onerror=function(){
+
+   }  
+      要求这放在js脚本的最前面。
+
+      onerror: 传递3个三参数
+       message:错误消息
+       url:  错误所在的URL
+       line：行号
+
+       错误类型：
+        类型转化错误
+        数据类型错误
+        通信错误
+
+
+
+
+
+
+
+      
+
+
+
+
+第一单元
+
+
+Object.defineProperty   三个参数（1要描述的对象 2要描述的属性 3 对属性的具体配置{value}）
+是否可枚举  enumerable：可枚举（true）/默认不可枚举（false）
+是否可读写  writable：  可读写（true）/默认不可读写（false）
+是否可配置（是否可通过delete删除当前属性）：configurable：可配置（true）/默认不可配置（false）
+Object.keys（对象名）获取对象属性名
+对象名.hasOwnProperty（属性名）   判断某个对象是否具有某个属性  返回true/false
+Object.getOwnPropertyDescriptor（对象名，属性名）  获取某个属性的配置信息  
+
+获取属性名的方法：1.for in  2.Object.keys
+
+
+  // in
+
+  // array
+
+  // --  instanceof  --  判断是否是实例  返回 布尔值
+
+第二单元
+
+
+数据属性：
+  configurable：表示是否使用delete操作符删除从而重新定义
+    显示定义的属性：默认true
+    通过defineProperty定义的属性：默认false
+  enumerable:表示是否可以通过for-in循环返回属性。默认true
+    显示定义的属性：默认true
+    通过defineProperty定义的属性：默认false
+  writable:表示是否可修改属性的值。
+    显示定义的属性 ：默认true
+    通过defineProperty定义的属性：默认false
+
+  value:包含该属性的数据值。读取/写入都是该值。默认undefined
+2、访问器属性：
+  
+  它主要包括getter 和 setter 函数
+四个特征：
+  configurable：是否可通过delete操作符重新定义属性
+  enumerable：是否可通过for-in循环Object.keys（）查找属性
+
+  // document.querySe。。。。。。；lector（./#）
+  get：读取时调用，默认：undefined
+  set：写入时调用，默认：undefined
+
+new 操作符：用于创建或实例化一个面向对象
+
+instanceof
+
+hasOwnProperty()
+A 属于某个实例的属性，而不属于的就返回真，否则返回假
+B 格式为实例名.hasOwnProperty("属性名")
+
+创建面向对象的方式：
+ 1.构造函数模式    // 方法相同的代码在实例上有好多份，浪费资源
+    定义实例本身独有的实例属性和方法
+   var variable = function(){
+       this.prop = value  // 属性赋给 
+   }  
+  通过new关键字                       来实例化  var sdfsf= new 
+  各个实力之间
+  variable.prop
+
+ 2.工厂模式   // 弊端：没法确定对象的具体类型
+   var variable = function(num){
+       var obj1={
+    name:value
+       }
+       var obj2={
+    name:value2
+       }
+  return obj+num
+   }
+   variable(1)
+   variable(2)
+
+
+ 3.原型链模式
+   prototype 用于共享属性和方法，区别于构造函数模式。
+    主要用于定义原型共享的实例属性和方法
+   吧属性和方法定义在原型链上
+   通过new关键字来实例化创建一个新对象
+
+   var animal=function(){
+   }；
+
+ 4.混合模式      // 属性放在实例上  方法放到原型上
+   构造函数模式与原型链模式的混合
+   var obj = function(){
+       this.data={}
+   };
+   obj.prototupe.name = function(){
+       alert(this.data)
+   };
+   var sfsd = new obj("") 
+   afsd.name();
+
+
+ 构造器  constuectou  
+prototype.constructor意为指向某个构造函数
+
+
+第三单元
+
+
+Object.getPrototypeOf()   // 根据实例找到原型对象
+
+Object.prototype.isPrototypeOf(对象名)     // 判断原型对象是否是实例的原型
+
+
+  new Function("","")
+  var fn = function fn(){}  // 了解
+  
+函数内部属性：
+  arguments  函数参数类数组
+    主要有两个属性  length  callee
+        callee  指向 arguments对象的对应函数
+      属性 callee（指向callee的调用方法）指向当前函数的的调用者
+  this 指向当前函数的的拥有者
+
+函数的继承 ：
+  call（param1,param2……paramn）； 改变函数的运行环境，一般用于
+  param1：当前函数的运行环境或者当前的对象
+  param2-paramn：参数列
+  apply（param1，param2）
+  param1：当前函数的运行环境或者当前的对象
+  param2：存放参数的数组 [  ]
+  bind（param）；改变函数的运行环境
+  param：当前函数的运行环境或者当前的对象
+       // 函数.bind（this）
+
+
+第五单元
+
+  ES5  新增循环遍历的方法
+
+    forEach有一个参数，callback  function
+  数组.forEach（function（value，index索引下标，self（可有可无）））{}
+
+    map()有一个参数，callback  function
+  需要在callback函数中return一个新值，性质会替换数组的救治，不会改变原数组，会返回新数组
+    
+    filter（）有一个参数，callback  function
+  在callback函数中定义过滤条件，返回符合过滤条件的新数组
+
+    some（）有一个参数，callback  function
+  返回布尔值
+
+    every（）有一个参数，callback  function
+  返回布尔值
+
+    reduce（）  有两个参数  第一个参数（callback  function）  第二个参数是初始值
+
+
+  第六单元
+
+    json数据源于js对象的一个子集
+  特点：
+     1、属性和属性值一定要用双引号引起来
+     2、轻量的数据交换格式，一般用于客户端与服务端的数据交互
+  方法：
+    1、JSON.parse（） 格式化json字符串为js对象
+    2、JSON.stringify（）  序列化js对象为json字符串
+
+  老的用于把js字符串当成js脚本来执行的一个方法
+     eval（）
+
+  第八单元
+    自定义事件
+  document.createEvent（param） param：1.HtmlEvent  2.UIEvent  3.MouseEvent
+  此方法返回一个事件对象
+  initEvent（）
+  
+
+  1、创建事件 var ev = document.createEvent（“UIEvent”）
+  2、初始化事件  第二个参数是是否冒泡 true冒泡  false捕获   .initEvent("事件名"，true，false)
+  3、发布事件   .dispatchEvent(ev)
+
+  第九单元
+      navigator.geolocation  对象
+  
+      geolocation  // IE9+
+  1、getCurrentPosition（param1，param2，param3）
+     param1：function（）{}  获取信息成功的回调函数
+     param2：function（）{}  获取信息失败的回调函数
+     param3：{
+    timeout：  1000  // 规定定位超时时间
+    enableHighAccuracy：bollean  //是否高精准度
+    maximumAge：0//默认0，及时获取地理位置。不为0，获取一定时间内的缓存
+    }
+  var geo = navigator.geolocation
+      if（geo）{
+    geo.getCurrentPosition（）
+    }
+
+
+     2.watchPosition（）  //参数同getCurrentPosition
+    //不停的获取位置信息
+     3.clearWatch（）
+    // 停止获取位置
+
+  浏览器历史
+      history.back（）；
+      history.forward（）；
+      history.go（2）；
+      history.go（-2）；
+    
+
+    pushState ：向浏览器历史记录中添加一个状态
+    replaceState ：替换当前的历史状态
+    popState 事件
+      
+      //  事件  hashchange
+      location.href  获取地址信息
+      location.reload  刷新浏览器
+
+
+
+
+  userAgent  客户端信息
+
+hashchange事件
+
+十一单元ajax
+  ajax：  XHLHTTPRequest对象   IE6：ActiveXObject（）
+  
+  XHLHTTPRequest方法：
+    1、open（param1，param2，param3）  开启请求
+    param1：请求方式：get（默认）、post
+    param2：请求地址：字符格式的路径，如果是get方式。沿用？在链接后面拼接参数
+    param3： asyns（异步）：值为boolean，默认true
+    2、send（param）  发送请求
+    param：受用post方式可以用来向服务段发送数据，数据格式string，一般通过json的stringify（）方法进行序列化
+    
+    3、回调函数 onreadystatechange  董请求状态发生变化，就会触发这个回调函数，并返回相应
+
+    
+
+    属性：
+    status：http请求状态码 100 200 300 400 500
+    readyState：0,1,2,3,4
+      0：（未初始化）（请求未初始化（在调用 open() 之前））send方法还未调用  new MLHttpReqwest
+      1：（加载中）（请求已提出（调用 send() 之前））已经调用send，请求还在处理
+      2：（已加载）（请求已发送（这里通常可以从响应得到内容头部））send方法已完成，整个应答已接受
+      3：（解析中）（请求处理中（响应中通常有部分数据可用，但是服务器还没有完成响应））解析应答，分析数据
+      4：（已完成）（响应已完成）
+
+    responseText：存储响应信息21
+
+
+
+
+   设置行内样式社
+    一次性设置多个样式：
+    box.style.cssText(border:solid 1px #FFF;background:red)
+    
+    获取非行内样式  getComputeStyle（obj，null/""/伪类（：after/：before”）） （只读：只能获取不能设置）
+      获取最终限制的样式值，不带单位
+  IE8：element。currentStyle（）；
+
+  docuemnt.styleSheets返回style元素或者link元素引入与的css文档
+  格式：类数组  存放的是CSSStyleSheet对象
+      CSSStyleSheet：
+    属性CSSRules 
+    方法：insertRule（“添加的样式”，位置）  
+          deleteRule（索引）    IE：removerRule（） 
+      element.classList
+    方法：add（“className”）添加一个className
+          remove（“className”）删除一个className
+          toggle（“className”）切换一个className（如果有样式就删除，无样式添加）
+
+
+
+  同源策略
+  1.相同协议 （http https）
+  2.相同域名 
+  3.相同的端口 
+  jsonp实现跨域请求
+  需要服务端做特殊处理来支持
+  利用script元素的src属性。本身具有跨域的特征性，来实现jsonp跨域请求
+
+
+  Object.seal（）阻止修改现有属性，组织添加新属性  /Object。isSeal（）
+  Object.freeze（）阻止修改现有属性的特征和值，阻止添加新属性 /Object.isFreeze()
+  Object.preventExtensions()阻止添加新属性 /Object.isExtensibe()
+
+
+
+   jsonp结构：
+  
+
+
+
+
+
+
+
+  table
+       table.insertRow()插入行
+  .insertCell（）插入单元格
+  table.createTHead（）
+  table.createTFoot（）
+
+
+
+
+
+  动画执行结束时触发的事件animationEnd  transtionEnd
+  box.addE....("webkitTranstionEnd"
+
+
+CSS用省略号实现文字自动截断
+
+overflow:hidden;;/* 内容超出宽度时隐藏超出部分的内容 */
+text-overflow:ellipsis;;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+white-space:nowrap;/* 不换行 */
+
+
+
+
+多行文本省略号显示
+
+overflow : hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;

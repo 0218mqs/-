@@ -1,0 +1,281 @@
+1、dom 操作
+
+   1）节点关系：父子关系 兄弟关系  childNodes  parentNode nextSibling previousSibling  
+   2) 节点属性:nodeType 节点类型  1 2 3  8 9   
+	       nodeValue 节点值   文本本身  属性值  null
+	       nodeName  节点名字  #text    属性名  大写的元素名SPAN
+   3)节点方法：
+	查找节点   id  byTagName byName  byClassName(封装此方法，因为有兼容问题)
+	创建节点   文本节点document.createTextNode()  createElement()
+	插入节点   insertBefore(新节点，要插入在哪个节点之前)   appendChild()追加节点
+	删除节点   removeChild()
+	替换节点   父节点.replaceChild(新节点，要替换的节点）
+	克隆节点   要复制的节点 .cloneNode(true)
+	
+   4) 标准属性
+	元素.getAttribute("属性名")  
+	元素.setAttribute("属性名","属性值")
+	元素.removeAttribute("属性名")
+	元素.属性名=属性值
+   5)样式：
+	设置：
+      行内样式；元素.style.属性名=属性值
+
+      类：      元素.className='样式名'
+    
+     非行内样式的获取：
+	
+	function  getStyle(obj,style){
+		//ie
+		if(obj.currentStyle){
+	
+		  return	obj.currentstyle[style];
+		}else{
+		  return 	getComputedStyle(obj,null)[style];
+    
+         }
+
+   6） 内容：
+	span   innerHTML
+        input   value
+               innerText
+
+
+ 7) js盒模型：
+	
+	偏移量：
+        offsetWidth  width+border+padding
+	offsetHeight height+border+padding
+	offsetLeft   
+        offsetTop
+	
+       客户区
+	 clientWidth  width+padding
+	 clientHeight
+          document.documentElement.clientWidth  可视区的宽度
+	  document.body.clientWidth
+       滚动大小：
+	 scrollTop
+	 scrollLeft
+ 
+  8)封装对象上的方法：
+	$={}
+        $.byId()
+        $.byClassName()
+        $.hasClass()
+	$.addClass()
+        $.removeClass()
+
+
+二、事件
+
+	1）事件流
+	2）事件处理程序
+          HTML事件处理程序
+			<div onclick="fn()"></div>
+    	  DOM0级事件处理程序
+			btn.onclick=function(){
+				console.log(this)						
+				}
+     	  DOM2级事件处理程序
+		  btn.addEventListener(事件名，函数名/匿名函数， 布尔值false/true)
+	 IE事件处理程序
+		  btn.attachEvent(on+事件名，函数名/匿名函数)
+
+ 	  跨浏览器事件处理程序
+           dom2  dom0
+		function  addHander(obj,event,fn){
+			if(obj.addEventListener){
+			 obj.addEventListener(event，fn， false)
+		  }else{
+			 obj["on"+event]=fn
+		}	
+		}
+
+	//IE  dom0
+	btn  click say
+	
+    addHander(btn,'click',say)
+
+      3） 事件对象
+	访问事件对象？
+	DOM  作为函数的第一个参数
+	IE   window.event
+	
+ 	  function(e){
+		var event=e || window.event;
+	}
+
+	事件对象三个属性 2个方法：
+	 a.  事件类型  event.type
+	 b.   事件目标  dom   event.target  ie   event.srcElement    event.target ||  event.srcElement
+
+	     事件委托：利用事件冒泡的原理。
+	三种方法来实现单击li 弹出li的里的内容
+	 for
+	 事件委托
+	 闭包
+	 b.  鼠标的坐标：event.clientX  event.clientY
+	
+        阻止冒泡：
+		dom   event.stopPropagation()
+		IE    event.cancelBubble=true;
+	阻止默认行为：
+		dom  event.preventDefault()
+  		IE   event.returnValue=false;
+		     return  false
+
+       4)事件类型：
+	  UI事件   window   load  unload  resize  scroll  error  select
+          焦点事件  focus  blur
+	  鼠标事件  
+           键盘事件  keydown  keypress  keyup
+
+
+三、正则
+
+ 创建正则的方法:
+ 
+ var  reg=/ /
+ var reg=new RegExp('','')  
+	
+g   i  m
+
+元字符：
+	【】
+	 【^233】
+	\d
+        \D
+	\w	
+	\W
+	\s
+	\b
+	.
+
+	{2,}
+	{6}
+	?
+	+
+	*
+() 分组
+|  或者
+
+转义字符  \(
+
+汉字 ：\u4e00-\u9fa5
+单字节 [^\x00-\xff]
+
+正则方法：
+
+regObject.test(str)  
+regObject.exec(str)
+
+字符串的方法：
+
+replace()  g
+split()  
+search()
+match()
+
+
+
+四、 作用域 
+     数据类型；存储
+     
+each()
+map()
+filter()
+
+
+1)byclassName
+2) addClass
+3）removeClass
+4)hasclass
+
+正则：
+
+url地址栏解析
+http://www.baidu.com/?sex=男&age=16&id=2&c&d=
+$={
+	sex:男，
+	age:16,
+	id:2,
+	c:undefined,
+	d:""
+	}
+
+function getURL(name){
+
+return 
+}
+
+getURL(sex)   
+getURL(age)  16
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
